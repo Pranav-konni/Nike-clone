@@ -1,0 +1,156 @@
+@use "./abstract/variables" as var;
+
+.account-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ff0000 0%, #d92b2b 45%, #7ca4a4 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .top-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: #ff0000;
+    border-bottom: 1px solid #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .account-card {
+    width: 420px;
+    min-height: 560px;
+    background: #d9d9d9;
+    border-radius: 30px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .profile-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .profile-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      h1 {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 700;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #000;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #444;
+      font-size: 1rem;
+    }
+  }
+
+  .account-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+
+    .menu-item {
+      width: 100%;
+      height: 55px;
+      background: #fff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: translateX(5px);
+        background: #f5f5f5;
+      }
+    }
+  }
+  .account-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    .back-home-btn {
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      background: var.$dark;
+      color: var.$peace;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: var.$peace;
+        color: var.$dark;
+        transform: translateY(-2px);
+      }
+    }
+    .logout-btn {
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      background: var.$danger;
+      color: var.$peace;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s ease;
+
+      &:hover {
+        background: var.$bigDanger;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .account-page {
+    padding: 1rem;
+
+    .account-card {
+      width: 100%;
+      max-width: 400px;
+      min-height: auto;
+      padding: 2rem;
+    }
+  }
+}

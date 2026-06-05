@@ -1,0 +1,91 @@
+@use "./abstract/variables" as var;
+.footer {
+  color: var.$peace;
+  display: grid;
+  justify-items: center;
+  width: 100%;
+
+  .container {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+    }
+    .footer-content {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 3.8rem;
+
+      p {
+        color: var.$light;
+      }
+
+      @media screen and (min-width: 768px) {
+        gap: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+        display: flex;
+        gap: 3.8rem;
+        justify-content: center;
+        li {
+          position: relative;
+          a {
+            text-decoration: none;
+            color: var.$light;
+
+            @media screen and (min-width: 768px) {
+              font-size: 0.7rem;
+            }
+          }
+          @media screen and (min-width: 768px) {
+            gap: 1.2rem;
+          }
+          @media screen and (min-width: var.$LaptopS) {
+            gap: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+hr {
+  color: var.$danger;
+}
+@media screen and (min-width: var.$LaptopL) {
+  .footer {
+    width: auto;
+    .container {
+      .footer-content {
+        gap: 75px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: var.$LaptopS) {
+  .footer {
+    .container {
+      width: 100%;
+      .footer-content {
+        gap: 1rem;
+        .footer-links {
+          gap: 3rem;
+
+          li {
+            position: relative;
+
+            a {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

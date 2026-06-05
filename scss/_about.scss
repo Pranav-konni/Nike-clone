@@ -1,0 +1,85 @@
+@use "./abstract/variables" as var;
+
+.about-layer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+
+  .container {
+    width: 80%;
+
+    .logo-layer {
+      justify-items: center;
+      display: grid;
+      padding: 20px;
+
+      img {
+        align-items: center;
+        width: 5%;
+        height: 90%;
+      }
+    }
+
+    .about-products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(101px, 1fr));
+      grid-auto-flow: column;
+      align-items: center;
+
+      .featured-section,
+      .shoes-section,
+      .clothing-section,
+      .shoes-section {
+        display: flex;
+        color: var.$peace;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+
+        p {
+          a {
+            text-decoration: none;
+            color: var.$light;
+          }
+          a:hover {
+            color: var.$peace !important;
+          }
+        }
+      }
+    }
+    .about-company {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(101px, 1fr));
+      grid-auto-flow: column;
+      padding-top: 5rem;
+
+      .resource-section,
+      .help-section,
+      .company-section,
+      .promotioAndDiscount-section {
+        display: flex;
+        color: var.$peace;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+
+        p {
+          a {
+            text-decoration: none;
+            color: var.$light;
+          }
+          a:hover {
+            color: var.$peace !important;
+          }
+        }
+      }
+    }
+  }
+  .location-section {
+    padding-top: 4rem;
+  }
+}

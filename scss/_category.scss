@@ -1,0 +1,570 @@
+@use "./abstract/variables" as var;
+@use "./components/button";
+@use "./heroCard";
+
+.category-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var.$dark;
+  color: var.$peace;
+  overflow-x: hidden;
+
+  .navbar-section {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: var.$dark;
+  }
+
+  .hero-section,
+  .featured-section,
+  .promotion-section,
+  .trending-section,
+  .bottom-banner-section {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .section-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    color: var.$peace;
+    h1,
+    h2 {
+      margin: 0;
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+
+      .nav-btn {
+        position: relative;
+        inset: unset;
+        display: flex;
+        width: 42px;
+        height: 42px;
+        border: none;
+        border-radius: 50%;
+        background: #acacac;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background: #d8d8d8;
+        }
+
+        .arrow {
+          border: solid #ffffff;
+          border-width: 0 2px 2px 0;
+          display: inline-block;
+          padding: 4px;
+        }
+
+        &.left .arrow {
+          transform: rotate(135deg);
+          margin-left: 4px;
+        }
+
+        &.right .arrow {
+          transform: rotate(-45deg);
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  .scroll-layout {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .hero-section {
+    .heroCard {
+      width: 100%;
+      height: 50vh;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .static-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      padding: 0;
+
+      .image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.15)
+          );
+        }
+      }
+
+      .promo1-text {
+        position: absolute;
+        left: 4rem;
+        bottom: 4rem;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h1,
+        h3 {
+          display: none;
+        }
+
+        h2 {
+          font-size: clamp(3rem, 8vw, 7rem);
+          line-height: 0.9;
+          margin: 0;
+          font-weight: 900;
+          text-transform: uppercase;
+          color: #fff;
+        }
+
+        p {
+          margin: 0;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+
+        .shop-btn {
+          width: 160px;
+          height: 50px;
+          border: 2px solid #fff;
+          background: transparent;
+          color: #fff;
+          font-weight: 700;
+          border-radius: 999px;
+          cursor: pointer;
+          transition: 0.3s ease;
+
+          &:hover {
+            background: #fff;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  .featured-section {
+    .heroCard {
+      width: 340px;
+      height: 440px;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .static-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding: 0;
+
+      .image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.12)
+          );
+        }
+      }
+
+      .promo1-text {
+        position: absolute;
+        left: 2rem;
+        bottom: 2rem;
+        z-index: 2;
+
+        h1,
+        h3,
+        p {
+          display: none;
+        }
+
+        h2 {
+          margin: 0 0 1rem;
+          color: #f6f6f6;
+          font-size: clamp(2rem, 4vw, 3rem);
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+
+        .shop-btn {
+          min-width: 120px;
+          height: 44px;
+          border: 2px solid #fff;
+          background: transparent;
+          color: #fff;
+          border-radius: 999px;
+          font-weight: 700;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .promotion-section {
+    .heroCard {
+      width: 100%;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .static-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding: 0;
+
+      .image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.1)
+          );
+        }
+      }
+
+      .promo1-text {
+        position: absolute;
+        left: 3rem;
+        top: 80%;
+        transform: translateY(-50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h1,
+        h3 {
+          display: none;
+        }
+
+        h2 {
+          margin: 0;
+          font-size: clamp(2rem, 5vw, 5rem);
+          font-weight: 900;
+          text-transform: uppercase;
+          color: #fff;
+        }
+
+        p {
+          margin: 0;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 1rem;
+        }
+
+        .shop-btn {
+          width: 140px;
+          height: 44px;
+          border: 2px solid #fff;
+          background: transparent;
+          color: #fff;
+          border-radius: 999px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .trending-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 24px;
+    position: relative;
+    overflow: hidden;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+      color: #fff;
+    }
+
+    .scroll-layout {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      gap: 20px;
+      width: 100%;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .heroCard.staticCard {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0px;
+        width: 420px;
+        height: 546px;
+        flex-shrink: 0;
+        background-color: var.$peace;
+
+        @media screen and (max-width: 1440px) {
+          width: 276px;
+          height: 427px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          width: 260px;
+          height: 410px;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 258px;
+          height: 410px;
+        }
+
+        @media screen and (max-width: 480px) {
+          width: 269px;
+          height: 420px;
+        }
+
+        .static-content {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+
+          .image {
+            height: 361px;
+            flex-shrink: 0;
+            line-height: 0;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+            display: grid;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+            }
+          }
+
+          .promo1-text {
+            color: #000;
+            padding: 0.7rem;
+            display: grid;
+            justify-items: start;
+            gap: 0.4rem;
+
+            h1,
+            h2 {
+              display: none;
+            }
+
+            h3 {
+              font-size: 2rem;
+              font-family: fantasy;
+              margin: 0;
+            }
+
+            p {
+              margin: 0;
+              font-family:
+                "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            }
+            .prom-shop-btn,
+            .shop-now-btn {
+              margin-top: 0.8rem;
+              width: 100%;
+              height: 44px;
+              border: none;
+              background: #000;
+              color: #fff;
+              border-radius: 999px;
+              font-weight: 700;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #000;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-banner-section {
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .heroCard {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .staticCard {
+        .static-content {
+          .image {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .heroCard.staticCard .static-content img {
+      width: 100%;
+      height: 81vh;
+      border-radius: 1rem;
+      display: block;
+    }
+    .promo1-text {
+      position: relative;
+      gap: 0.3rem;
+      z-index: 2;
+      display: grid;
+      justify-items: center;
+    }
+  }
+
+  .loading {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var.$dark;
+    color: var.$peace;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+}
+
+.footer {
+  color: var.$dark;
+  .container {
+    width: 100%;
+    .footer-content {
+      color: var.$peace;
+
+      @media screen and (max-width: 1024px) {
+        .footer .container .footer-content {
+          gap: 19px;
+        }
+      }
+
+      .footer-links {
+        li {
+          a {
+            color: var.$dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category-page {
+    .section-head {
+      .nav-controls {
+        .nav-btn {
+          width: 38px;
+          height: 38px;
+        }
+      }
+    }
+
+    .hero-section,
+    .featured-section,
+    .promotion-section,
+    .trending-section,
+    .bottom-banner-section {
+      padding: 0.7rem;
+    }
+
+    .featured-section {
+      .heroCard {
+        width: 280px;
+      }
+    }
+
+    .bottom-banner-section {
+      .bottom-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

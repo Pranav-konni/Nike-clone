@@ -1,0 +1,284 @@
+{
+  "banner": [
+    {
+      "id": "b1",
+      "collabName": "Barca X Zoro",
+      "subtitle": "Starting @ ₹12,999",
+      "bgImage": "/images/bannerBG.png",
+      "productImage": "/images/jordanXtravisscott.png",
+      "ctaText": "Shop Now",
+      "themeColor": "#ffffff",
+      "productId": "p9"
+    },
+    {
+      "collabName": "Nike X bill",
+      "subtitle": "Starting @12999",
+      "bgImage": "/images/bannerBG.png",
+      "productImage": "/images/jordanXtravisscott.png",
+      "ctaText": "Shop Now",
+      "themeColor": "#ffffff",
+      "textColor": "#ffffff",
+      "id": "Vow8nvO5jBs"
+    },
+    {
+      "collabName": "Nike X barce",
+      "subtitle": "Starting @12999",
+      "bgImage": "/images/barcaXnike.png",
+      "productImage": "/images/jordanXtravisscott.png",
+      "ctaText": "Shop Now",
+      "themeColor": "#ffffff",
+      "textColor": "#ffffff",
+      "id": "4dyzhbH8s9A"
+    }
+  ],
+  "promotion1": [
+    {
+      "id": "p1",
+      "collabImage": "/images/txj.png",
+      "collabName": "Travis Scott X Jordan",
+      "Quote": "The Out West Vibe",
+      "buttonName": "Shop Now",
+      "themeColor": "#000000",
+      "productId": "p9"
+    }
+  ],
+  "featured": [
+    {
+      "id": "f1",
+      "bgImage": "/images/runningShoe.jpg",
+      "prdtName": "Running",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#ffffff",
+      "link": "/shop/men"
+    },
+    {
+      "id": "f2",
+      "bgImage": "/images/sportShoe.jpg",
+      "prdtName": "Sports",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#ffffff",
+      "link": "/shop/women"
+    },
+    {
+      "id": "f3",
+      "bgImage": "/images/basketballShoe.jpg",
+      "prdtName": "Basketball",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#ffffff",
+      "link": "/shop/men"
+    },
+    {
+      "id": "f4",
+      "bgImage": "/images/footballShoe.jpg",
+      "prdtName": "Football",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#ffffff",
+      "link": "/shop/sale"
+    }
+  ],
+  "products": [
+    {
+      "productImage": "/images/nikeStructure26.jpg",
+      "modelName": "Nike Structure 26",
+      "description": "Unisex Running Shoe",
+      "variants": "4 Colors",
+      "price": "2499",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#000000",
+      "category": "sale",
+      "featuredType": "running",
+      "trending": true,
+      "topSeller": false,
+      "id": "p3"
+    },
+    {
+      "productImage": "/images/NikeOmniMulti-court.jpg",
+      "modelName": "Nike Omni",
+      "description": "Women’s Training Shoe",
+      "variants": "2 Colors",
+      "price": "2199",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#000000",
+      "category": "women",
+      "featuredType": "sports",
+      "trending": true,
+      "topSeller": false,
+      "id": "p4"
+    },
+    {
+      "id": "p7",
+      "productImage": "/images/barce20-21GK.jpg",
+      "modelName": "Barcelona Goalkeeper Kit",
+      "description": "2020-21 Edition",
+      "variants": "3 Sizes",
+      "qty": 9,
+      "price": 3999,
+      "shopBtnName": "Shop Now",
+      "themeColor": "#000000",
+      "trending": false,
+      "topSeller": false,
+      "featured": true,
+      "featuredType": "football",
+      "category": "men",
+      "gallery": [
+        "/images/barce20-21GK.jpg",
+        "/images/barce20-21GK.jpg"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "#00ff00",
+        "#000000",
+        "#ffffff"
+      ]
+    },
+    {
+      "id": "p9",
+      "productImage": "/images/nikePrecision8mid.jpg",
+      "modelName": "Precision 8 Mid",
+      "description": "Basketball Performance Shoe",
+      "variants": "3 Colors",
+      "price": "5499",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#000000",
+      "category": "men",
+      "featuredType": "basketball",
+      "trending": false,
+      "topSeller": true
+    },
+    {
+      "id": "FD5Pcw23pKM",
+      "productImage": "/images/NikeOmniMulti-court.jpg",
+      "modelName": "Nike Omni",
+      "description": "Women’s Training Shoe",
+      "variants": "2 Colors",
+      "price": "2199",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#000000",
+      "category": "women",
+      "featuredType": "running",
+      "trending": false,
+      "topSeller": true
+    },
+    {
+      "productImage": "/images/NikeOmniMulti-court.jpg",
+      "modelName": "Nike Omni",
+      "description": "Women’s Training Shoe",
+      "variants": "2 Colors",
+      "price": "2199",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#000000",
+      "category": "men",
+      "featuredType": "running",
+      "trending": true,
+      "topSeller": false,
+      "id": "XN3VhsHES1I"
+    },
+    {
+      "id": "OPfbW3lEtTA",
+      "productImage": "/images/nikeRunSwift3.jpg",
+      "modelName": "Nike Run Swift",
+      "description": "Women’s Training Shoe",
+      "variants": "3 colors",
+      "price": "1299",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#000000",
+      "category": "women",
+      "featuredType": "running",
+      "trending": false,
+      "topSeller": true
+    },
+    {
+      "id": "UYj6K2s7yhg",
+      "productImage": "/images/barce17-18.jpg",
+      "modelName": "Barcelona Home",
+      "description": "2017-18 Official",
+      "variants": "1 color",
+      "price": "7,499",
+      "shopBtnName": "Shop Now",
+      "themeColor": "#000000",
+      "category": "men",
+      "featuredType": "running",
+      "trending": false,
+      "topSeller": true
+    }
+  ],
+  "promotion2": [
+    {
+      "id": "p2",
+      "collabImage": "/images/barcaXnike.png",
+      "collabName": "Barcelona X Nike",
+      "Quote": "Football Meets Streetwear",
+      "buttonName": "Shop Now",
+      "themeColor": "#ffffff",
+      "productId": null
+    }
+  ],
+  "promotion3": [
+    {
+      "id": "p3",
+      "collabImage": "/images/louisXnike.png",
+      "collabName": "Louis X Nike",
+      "Quote": "Luxury Meets Streetwear",
+      "buttonName": "Shop Now",
+      "themeColor": "#000000",
+      "productId": null
+    }
+  ],
+  "categories": [
+    {
+      "id": "c1",
+      "slug": "men",
+      "title": "Men Collection"
+    },
+    {
+      "id": "c2",
+      "slug": "women",
+      "title": "Women Collection"
+    },
+    {
+      "id": "c3",
+      "slug": "kids",
+      "title": "Kids Collection"
+    },
+    {
+      "id": "c4",
+      "slug": "sale",
+      "title": "Sale Collection"
+    }
+  ],
+  "offers": [
+    {
+      "offerText": "Offer 20% Off",
+      "buttonName": "Shop Now",
+      "id": "o1"
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "Admin User",
+      "email": "admin@nike.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "u2",
+      "name": "Pranav",
+      "email": "pranav@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "username": "Pranav",
+      "email": "pranavtest@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "id": "JMFovIUnDeM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

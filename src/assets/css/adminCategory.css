@@ -1,0 +1,254 @@
+.admin-category-manager {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+.admin-category-manager .category-header {
+  background: linear-gradient(rgba(30, 229, 225, 0.4) 0%, rgba(0, 172, 193, 0.9) 100%);
+  padding: 1.5rem;
+  border-radius: 0.2rem;
+  display: grid;
+  justify-items: center;
+}
+.admin-category-manager .category-header h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+.admin-category-manager .category-header p {
+  margin: 0.4rem 0 0;
+  color: rgba(255, 255, 255, 0.3058823529);
+  font-size: 0.9rem;
+}
+.admin-category-manager .category-layout {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.admin-category-manager .category-section {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.admin-category-manager .section-title {
+  margin-bottom: 1.5rem;
+}
+.admin-category-manager .section-title h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.admin-category-manager .category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media screen and (max-width: 1024px) {
+  .admin-category-manager .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.admin-category-manager .category-form {
+  background: linear-gradient(rgba(30, 229, 225, 0.4) 0%, rgba(0, 172, 193, 0.9) 100%);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+}
+.admin-category-manager .category-form .input-group {
+  display: grid;
+  gap: 0.4rem;
+}
+.admin-category-manager .category-form .input-group label {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.admin-category-manager .category-form .input-group input {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-radius: 0.4rem;
+  outline: none;
+  box-sizing: border-box;
+}
+.admin-category-manager .category-form .input-group input:focus {
+  border-color: #fff;
+}
+.admin-category-manager .category-form .input-group .path-preview {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+}
+.admin-category-manager .category-form .form-actions {
+  margin-top: 0.5rem;
+}
+.admin-category-manager .category-form .submit-btn {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 999px;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.admin-category-manager .preview-wrapper {
+  display: grid;
+  place-items: center;
+}
+.admin-category-manager .activity-preview-card {
+  width: 100%;
+  max-width: 360px;
+  height: 500px;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  background: #111;
+}
+.admin-category-manager .activity-preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.admin-category-manager .activity-preview-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.1));
+}
+.admin-category-manager .activity-preview-card .preview-content {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 2;
+}
+.admin-category-manager .activity-preview-card .preview-content h2 {
+  margin: 0 0 1rem;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.admin-category-manager .activity-preview-card .preview-content button {
+  width: 180px;
+  height: 48px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  border-radius: 0.4rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.admin-category-manager .product-preview-card {
+  width: 100%;
+  max-width: 340px;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.admin-category-manager .product-preview-card .product-image {
+  width: 100%;
+  height: 260px;
+  background: #f3f3f3;
+}
+.admin-category-manager .product-preview-card .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.admin-category-manager .product-preview-card .product-content {
+  padding: 1.5rem;
+}
+.admin-category-manager .product-preview-card .product-content h3 {
+  margin: 0;
+  color: #000;
+  font-size: 1.3rem;
+}
+.admin-category-manager .product-preview-card .product-content p {
+  color: #666;
+  margin: 0.5rem 0;
+}
+.admin-category-manager .product-preview-card .product-content span {
+  display: block;
+  margin-bottom: 1rem;
+  color: #999;
+  font-size: 0.9rem;
+}
+.admin-category-manager .product-preview-card .product-content .product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admin-category-manager .product-preview-card .product-content .product-footer h4 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #000;
+}
+.admin-category-manager .product-preview-card .product-content .product-footer button {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.admin-category-manager .table-wrapper {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+.admin-category-manager .table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.admin-category-manager .table-wrapper table th {
+  background: #f3f3f3;
+  padding: 1rem;
+  text-align: left;
+  color: #000;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+.admin-category-manager .table-wrapper table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  color: #000;
+}
+.admin-category-manager .table-wrapper table .table-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.admin-category-manager .table-wrapper table .table-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.admin-category-manager .table-wrapper table .edit-btn {
+  border: none;
+  background: none;
+  color: #0077ff;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.admin-category-manager .table-wrapper table .delete-btn {
+  border: none;
+  background: none;
+  color: red;
+  font-weight: 700;
+  cursor: pointer;
+}/*# sourceMappingURL=adminCategory.css.map */

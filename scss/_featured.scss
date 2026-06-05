@@ -1,0 +1,253 @@
+@use "./abstract/variables" as var;
+
+.feature {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 24px;
+  position: relative;
+  background-color: var.$dark;
+  color: var.$peace;
+  overflow: hidden;
+
+  @media screen and (min-width: var.$mobile) {
+    min-width: 100%;
+  }
+  @media (min-width: 768px) {
+    padding: 40px 48px;
+    padding: 40px 48px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    @media (min-width: 769px) {
+      font-size: 2rem;
+    }
+  }
+
+  .scroll-layer {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    gap: 20px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .heroCard {
+      flex-shrink: 0;
+      width: 85vw;
+      height: 450px;
+      overflow: hidden;
+      position: relative;
+      background: transparent;
+
+      @media screen and (max-width: var.$mobile) {
+        width: 210px;
+        height: 300px;
+      }
+
+      @media (min-width: var.$tablet) {
+        width: 240px;
+        height: 340px;
+      }
+
+      @media screen and (min-width: var.$LaptopS) {
+        width: 260px;
+        height: 360px;
+      }
+
+      @media screen and (min-width: var.$LaptopL) {
+        width: 280px;
+        height: 380px;
+      }
+
+      &.staticCard {
+        .static-content {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          border-radius: 20px;
+
+          .image {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+              border-radius: 20px;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.8) 0%,
+                rgba(0, 0, 0, 0.25) 45%,
+                rgba(0, 0, 0, 0) 100%
+              );
+              border-radius: 20px;
+            }
+          }
+
+          .promo1-text {
+            position: absolute;
+            left: 24px;
+            top: 16rem;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+
+            @media screen and (max-width: var.$LaptopS) {
+              top: 15rem;
+            }
+            @media screen and (max-width: var.$tablet) {
+              top: 14rem;
+            }
+            @media screen and (max-width: var.$mobile) {
+              top: 12rem;
+            }
+            h1,
+            h3,
+            p {
+              display: none;
+            }
+
+            h2 {
+              margin: 0;
+              color: var.$peace;
+              font-size: 2rem;
+              font-weight: 900;
+              line-height: 1;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+
+              @media screen and (max-width: var.$mobile) {
+                font-size: 1.5rem;
+              }
+            }
+
+            .shop-btn {
+              width: 145px;
+              height: 52px;
+              border: 2px solid var.$peace;
+              background: transparent;
+              color: var.$peace;
+              font-size: 1rem;
+              font-weight: 700;
+              border-radius: 6px;
+              cursor: pointer;
+              transition: 0.3s ease;
+
+              &:hover {
+                background: var.$peace;
+                color: var.$dark;
+              }
+            }
+          }
+
+          .prom-shop-btn {
+            position: absolute;
+            left: 24px;
+            bottom: 43px;
+            z-index: 2;
+
+            @media screen and (min-width: var.$mobile) {
+              bottom: 41px;
+            }
+
+            .shop-now-btn {
+              width: 100px;
+              height: 35px;
+              padding: 2px 7px;
+              border: 2px solid #fff;
+              background: transparent;
+              color: #fff;
+              font-size: 0.8rem;
+              font-weight: 700;
+              border-radius: 6px;
+              cursor: pointer;
+              transition: 0.3s ease;
+
+              &:hover {
+                background: var.$peace;
+                color: var.$dark;
+              }
+
+              @media screen and (min-width: var.$mobile) {
+                width: 81px;
+                height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 300px;
+    z-index: 10;
+    border: none;
+    background: rgba(255, 255, 255, 0.3058823529);
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: var.$mobile) {
+      top: 232px;
+    }
+
+    @media (min-width: var.$LaptopL) {
+      display: flex;
+      top: 300px;
+    }
+
+    &:hover {
+      background: var.$light-dark;
+    }
+
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+
+    .arrow {
+      border: solid black;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 4px;
+    }
+
+    &.left .arrow {
+      transform: rotate(135deg);
+      margin-left: 4px;
+    }
+
+    &.right .arrow {
+      transform: rotate(-45deg);
+      margin-right: 4px;
+    }
+  }
+}

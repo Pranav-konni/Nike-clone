@@ -1,0 +1,159 @@
+@use "./abstract/variables" as var;
+
+.trending {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 24px;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  overflow: hidden;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+
+  .scroll-layer {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    gap: 20px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    width: 100%;
+
+    .heroCard.staticCard {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      padding: 0px;
+      width: 420px;
+      height: 546px;
+      flex-shrink: 0;
+      background-color: var.$peace;
+
+      @media screen and (min-width: var.$LaptopL) {
+        width: 276px;
+        height: 427px;
+      }
+      @media screen and (min-width: var.$LaptopS) {
+        width: 260px;
+        height: 410px;
+      }
+      @media screen and (min-width: var.$tablet) {
+        width: 258px;
+        height: 410px;
+      }
+      @media screen and (min-width: var.$mobile) {
+        width: 287px;
+        height: 450px;
+      }
+      .static-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+
+        .image {
+          width: 100%;
+          height: 240px;
+          flex-shrink: 0;
+          line-height: 0;
+          padding: 0px;
+          margin: 0px;
+          overflow: hidden;
+        }
+
+        .promo1-text {
+          color: rgb(0 0 0);
+          padding: 0.4rem;
+          display: grid;
+          justify-items: start;
+          h3 {
+            font-size: 2rem;
+            font-family: fantasy;
+          }
+          p {
+            font-family:
+              "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+              "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+          }
+        }
+
+        .prom-shop-btn {
+          padding: 1rem;
+
+          .shop-now-btn {
+            background-color: rgb(255, 0, 0);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 0.8rem;
+            transition: all 0.2s;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 40px;
+    z-index: 10;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: none;
+    background: var.$light;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: var.$light-dark;
+    }
+
+    &.left {
+      top: 335px;
+      transform: translateY(-50%);
+      right: 100px;
+    }
+
+    &.right {
+      right: 48px;
+      top: 335px;
+      transform: translateY(-50%);
+      left: auto;
+      right: 10px;
+    }
+
+    .arrow {
+      border: solid black;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+
+    &.left .arrow {
+      transform: rotate(135deg);
+    }
+
+    &.right .arrow {
+      transform: rotate(-45deg);
+    }
+  }
+}

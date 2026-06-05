@@ -1,0 +1,51 @@
+@use "./abstract/variables" as var;
+@use "./components/button";
+
+.offer-layer {
+  margin: 0;
+  padding-top: 30px;
+  background: var.$dark;
+  height: 150px;
+  width: 100%;
+  .card-layer {
+    width: 100%;
+    height: 100%;
+
+    .heroCard.staticCard {
+      width: 100%;
+      height: 100%;
+      background-color: var.$cream;
+      border-radius: 0.2rem;
+
+      .static-content {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 30px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+
+        .promo1-text {
+          color: var.$dark;
+          display: flex;
+          gap: 5px;
+
+          .shop-btn {
+            background-color: var.$dark;
+            color: var.$peace;
+
+            &:hover {
+              background-color: var.$peace;
+              color: var.$dark;
+            }
+          }
+        }
+      }
+    }
+  }
+}

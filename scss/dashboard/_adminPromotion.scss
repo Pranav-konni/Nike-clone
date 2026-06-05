@@ -1,0 +1,234 @@
+@use "../abstract/variables" as var;
+.admin-promotion-manager {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+
+  .promotion-header {
+    background: var.$grad-blue;
+    border-radius: 0.1rem;
+    display: grid;
+    justify-items: center;
+    padding: 1.2rem;
+
+    .section-selector {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(131, 124, 124, 0);
+      padding: 8px 16px;
+      backdrop-filter: blur(10px);
+      width: fit-content;
+
+      label {
+        font-weight: 600;
+        color: var.$peace;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      select {
+        appearance: none;
+        background-color: transparent;
+        color: var.$dark;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 4px 24px 4px 8px;
+        cursor: pointer;
+        outline: none;
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+        background-size: 12px;
+      }
+    }
+  }
+  .promotion-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+
+    .promotion-form {
+      font-size: 1.2rem;
+      padding: 1rem;
+      display: grid;
+      gap: 1rem;
+      width: 100%;
+      height: 100%;
+      grid-template-columns: repeat(4, 0.5fr);
+
+      .button,
+      .upload-btn {
+        border-radius: 0.5rem;
+        border-radius: 0.5rem;
+        width: 40%;
+        height: 94%;
+
+        &:hover {
+          background: #22277c;
+          color: white;
+          transition: var.$trans;
+        }
+      }
+      .button,
+      .cancel-btn {
+        border-radius: 0.5rem;
+        border-radius: 0.5rem;
+        width: 40%;
+        height: 94%;
+
+        &:hover {
+          background: #22277c;
+          color: white;
+          transition: var.$trans;
+        }
+      }
+
+      .input-group {
+        width: 100%;
+
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+        }
+        input {
+          border-radius: 0.3rem;
+          height: 2rem;
+          width: 100%;
+          padding: 0.5rem;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+
+  .existing-promotions {
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+
+        thead {
+          tr {
+            th {
+              text-align: left;
+              padding: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .preview-card {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    .bg-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: fit;
+      z-index: 1;
+    }
+    .prod-img {
+      position: absolute;
+      right: 5%;
+      height: 80%;
+      width: 90%;
+      z-index: 2;
+      object-fit: contain;
+    }
+    .preview-content {
+      position: relative;
+      z-index: 1;
+      color: #000;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      gap: 1rem;
+      width: 100%;
+      top: 6rem;
+      h3 {
+        font-size: 4rem;
+        font-weight: bold;
+        color: var.$peace;
+      }
+      p {
+        color: var.$peace;
+        &:hover {
+          color: var.$peace;
+          background-color: var.$dark;
+        }
+      }
+      .cta-btn {
+        background: #ffffff;
+        color: #000000;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: var.$trans;
+
+        &:hover {
+          background: #000000;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+
+  .table-img-prev {
+    width: 80px;
+    height: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 90%;
+      object-fit: contain;
+    }
+  }
+
+  .edit-btn {
+    color: #4facfe;
+    background: none;
+    border: 1px solid #4facfe;
+    margin-right: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    &:hover {
+      background: #4facfe;
+      color: #fff;
+    }
+  }
+
+  .remove-btn {
+    color: #ff4b2b;
+    background: none;
+    border: 1px solid #ff4b2b;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    &:hover {
+      background: #ff4b2b;
+      color: #fff;
+    }
+  }
+}

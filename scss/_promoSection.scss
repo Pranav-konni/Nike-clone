@@ -1,0 +1,93 @@
+@use "./abstract/variables" as var;
+@use "./components/button";
+
+.promotion1-layer,
+.promotion2-layer,
+.promotion3-layer {
+  width: 100%;
+  display: block;
+  background: var.$dark;
+  overflow: hidden;
+  position: relative;
+  color: var.$peace;
+
+  @media screen and (min-width: var.$mobile) {
+    min-width: 100%;
+  }
+
+  .card-layer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .heroCard {
+      width: 100%;
+      display: block;
+
+      &.staticCard {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .static-content {
+          width: 100%;
+          line-height: 0;
+
+          img {
+            width: 100%;
+            display: block;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+
+        .promo-text,
+        .promo1-text {
+          position: relative;
+          z-index: 2;
+          display: grid;
+          justify-items: center;
+          gap: 1rem;
+          padding: 3rem 1rem;
+          text-align: center;
+          color: var.$peace;
+          line-height: normal;
+
+          @media screen and (min-width: var.$mobile) {
+            gap: 0.2rem;
+          }
+          h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var.$peace;
+
+            @media screen and (min-width: var.$mobile) {
+              font-size: 0.9rem;
+            }
+            @media screen and (min-width: var.$LaptopS) {
+              font-size: 1.9rem;
+            }
+          }
+
+          p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var.$peace;
+
+            @media screen and (min-width: var.$mobile) {
+              font-size: 0.3rem;
+            }
+
+            @media screen and (min-width: var.$LaptopS) {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

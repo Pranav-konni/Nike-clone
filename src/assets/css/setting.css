@@ -1,0 +1,129 @@
+.setting-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1.5rem;
+  background: #0f1117;
+  color: #f5f7fb;
+  display: grid;
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+.setting-header,
+.setting-form-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.setting-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.setting-header p {
+  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.setting-top-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.setting-card {
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.setting-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: #b8c2d7;
+}
+
+.setting-card p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.setting-form {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-field,
+.select-field,
+.textarea-field {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f8fbff;
+  outline: none;
+}
+
+.textarea-field {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.save-button,
+.reset-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.save-button {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.reset-button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+}
+
+.message-text {
+  color: #a5f3fc;
+  margin-top: 0.5rem;
+}
+
+.loading {
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 800px) {
+  .setting-top-cards {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=setting.css.map */

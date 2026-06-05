@@ -1,0 +1,45 @@
+@use "navbar";
+@use "category";
+@use "featured";
+@use "./abstract/variables" as var;
+@use "./components/button";
+@use "./search";
+@use "heroCard";
+@use "slider";
+@use "promoSection";
+@use "trending";
+@use "topSeller";
+@use "offer";
+@use "about";
+@use "footer";
+@use "dashboard/adminDashboard";
+@use "dashboard/adminCategory";
+@use "dashboard/adminBanner";
+@use "dashboard/adminPromotion";
+@use "dashboard/adminOffer";
+@use "dashboard/adminFeatured";
+@use "dashboard/adminTrending";
+@use "dashboard/adminTopSeller";
+@use "login";
+@use "register";
+@use "account";
+@use "cart";
+@use "product";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var.$dark;
+}
+
+@media screen and (max-width: var.$mobile) {
+  * {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
